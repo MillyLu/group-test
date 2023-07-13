@@ -1,0 +1,117 @@
+.modal {
+  width: 500px;
+
+  box-shadow: 0px 4px 20px 0px #00000014;
+
+  padding: 16px;
+  border-radius: 16px;
+}
+.modal_form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal_form__title {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #151317;
+}
+
+.modal_form__block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.modal_form__label {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #151317;
+}
+
+.modal_form_input {
+  width: 468px;
+  height: 48px;
+  padding: 12px 8px 12px 16px;
+  border-radius: 8px;
+  gap: 8px;
+  background: #f8f8f8;
+  border: none;
+font-family: Roboto;
+font-size: 14px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+color: #808185;
+
+}
+
+.modal_form_inputError{
+  width: 468px;
+  height: 48px;
+  padding: 12px 8px 12px 16px;
+  border-radius: 8px;
+  gap: 8px;
+  background: #f8f8f8;
+  border: none;
+font-family: Roboto;
+font-size: 14px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+color: #808185;
+  border: 1px solid #FF6161;
+}
+
+.modal_form_icon {
+  position: absolute;
+left: 435px;
+top: 40px;
+
+}
+
+.modal_form_icon svg {
+  width: 24px;
+  height: 24px;
+  color: #808185
+}
+
+.modal_form_error{
+  margin-top: -8px;
+  font-family: Roboto;
+font-size: 10px;
+font-weight: 400;
+line-height: 12px;
+letter-spacing: 0em;
+text-align: left;
+color: #FF6161;
+
+}
+
+
+.modal_form__button{
+  width: 468px;
+height: 48px;
+padding: 8px 12px 8px 12px;
+border-radius: 8px;
+border: none;
+background-color: #512689;
+color: white;
+font-family: Roboto;
+font-size: 16px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0em;
+margin-top: 16px;
+
+}
