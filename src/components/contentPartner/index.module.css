@@ -1,0 +1,45 @@
+.content{
+    display: flex;
+    flex-direction: raw;
+    gap: 129px;
+    padding: 49px 188px;
+    width: 100%;
+
+}
+
+.content_about{
+    width: 630px;
+}
+
+.content_about__text{
+font-family: Roboto;
+font-size: 16px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: left;
+color: #151317;
+margin-bottom: 24px;
+}
+
+.content_contacts__block{
+    display: flex;
+    gap: 10px;
+}
+
+.content_contacts__image{
+    width: 20px;
+    height: 20px;
+}
+
+.content_contacts__link{
+    color: #151317;
+    text-decoration: none;
+
+}
+
+.content_contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}

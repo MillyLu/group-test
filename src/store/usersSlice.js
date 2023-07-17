@@ -3,6 +3,12 @@ import axios from "axios";
 
 const USERS_API = "https://reqres.in/api/users?per_page=8";
 
+const initialState = {
+  loading: false,
+  users: [],
+  error: ''
+}
+
 export const fetchUsers = createAsyncThunk("users", async () => {
   try {
     const response = await axios.get(USERS_API);
@@ -12,18 +18,27 @@ export const fetchUsers = createAsyncThunk("users", async () => {
   }
 });
 
+
 export const usersSlice = createSlice({
   name: "users",
-  initialState: {
-    users: [],
-  },
-  reducers: {
-    setUsers: (state, action) => {
-      state.users = action.payload;
-    },
+  initialState,
+   extraReducers: (builder) => {
+    builder.addCase(fetchUsers.pending, (state) => {
+        state.loading = true;
+      })
+     builder.addCase(fetchUsers.fulfilled, (state, action) => {
+        state.loading = false;
+        state.users = action.payload;
+        state.error = null;
+      })
+      builder.addCase(fetchUsers.rejected, (state, action) => {
+        state.loading = 'failed';
+        state.users = [];
+        state.error = action.error.message;
+      });
   },
 });
 
 export default usersSlice.reducer;
 
-export const { setUsers } = usersSlice.actions;
+//export const { setUsers } = usersSlice.actions;

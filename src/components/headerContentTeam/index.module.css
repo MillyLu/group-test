@@ -1,9 +1,9 @@
-.header{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
 .header_title {
@@ -16,6 +16,7 @@
   color: white;
   width: 447px;
   height: 75px;
+  align-self: center;
 }
 
 .header_description {

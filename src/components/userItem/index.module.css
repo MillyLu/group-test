@@ -1,0 +1,35 @@
+.user{
+    width: 305px;
+
+padding: 36px 20px 20px 20px;
+border-radius: 10px;
+justify-content: center;
+align-items: center;
+display: flex;
+flex-direction: column;
+gap: 16px;
+box-shadow: 0px 0.9960451126098633px 3.984180450439453px 0px #33333326;
+
+
+}
+
+.user_avatar{
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+}
+
+.user_name{
+
+font-family: Roboto;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0em;
+color: #151317;
+
+}
+
+.user_likes{
+    align-self: flex-end;
+}
