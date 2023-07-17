@@ -1,0 +1,8 @@
+.users{
+    margin-top: 48px;
+    width: 1280px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px; 
+}

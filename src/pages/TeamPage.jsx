@@ -10,7 +10,7 @@ export function TeamPage() {
       <Header>
         <>
           <HeaderContentTeam />
-          <HeaderButton title="Вперед" />
+          <HeaderButton title="Выход" />
         </>
       </Header>
       <UserList />
