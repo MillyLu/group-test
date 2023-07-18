@@ -43,12 +43,24 @@ export function ModalRegister() {
   });
   password = watch("password", "");
 
+  const registration = async (data) => {
+    const response = await fetch("https://reqres.in/api/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const result = await response.json();
+    localStorage.setItem("token", `${result.token}`);
+  };
+
   return (
     <div className={styles.modal}>
       <form
         onSubmit={handleSubmit((data) => {
           console.log(data);
-          localStorage.setItem("token", "true");
+          registration({ email: data.email, password: data.password });
           navigate(path, { replace: true });
         })}
         className={styles.modal_form}

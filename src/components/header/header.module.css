@@ -2,8 +2,16 @@
   width: 1440px;
   height: 265px;
   background: #512689;
-  
+
   padding: 39px 188px;
 
   position: relative;
+}
+
+@media (max-width: 376px) {
+  .header {
+    width: 375px;
+    padding: 64px 16px;
+height:max-content;
+  }
 }

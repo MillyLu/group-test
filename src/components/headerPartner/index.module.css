@@ -61,3 +61,39 @@ color: white;
 
 
 
+@media (max-width: 376px) {
+    .header_content{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+    .header_content__name{
+        font-family: Roboto;
+font-size: 36px;
+font-weight: 400;
+line-height: 42px;
+letter-spacing: 0em;
+text-align: center;
+
+    }
+
+    .header_content__position{
+        font-family: Roboto;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: center;
+
+    }
+
+    .header_content__text{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+    }
+  }
+  

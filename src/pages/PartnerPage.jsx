@@ -1,4 +1,3 @@
-import { HeaderButton } from "../components/button/HeaderButton";
 import { Header } from "../components/header/Header";
 import { HeaderPartner } from "../components/headerPartner/HeaderPartner";
 import { ContentPartner } from "../components/contentPartner/ContentPartnet";

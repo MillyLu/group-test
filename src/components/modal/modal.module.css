@@ -115,3 +115,30 @@ letter-spacing: 0em;
 margin-top: 16px;
 
 }
+
+
+@media (max-width: 376px) {
+  .modal {
+    width: 375px;
+}
+.modal_form_input {
+  width: 343px;
+}
+
+.modal_form_inputError{
+  width: 343px;
+
+}
+
+.modal_form_icon {
+  position: absolute;
+left: 310px;
+top: 40px;
+
+}
+
+.modal_form__button{
+  width: 343px;
+}
+
+}
