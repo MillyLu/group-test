@@ -21,7 +21,8 @@ export function HeaderPartner({ name, avatar, lastName }) {
   };
   return (
     <div className={styles.header_content}>
-      <img
+        <div className={styles.header_content_ava}>
+        <img
         src={imageURL ? imageURL : avatar}
         className={styles.header_content__avatar}
         alt="avatar"
@@ -38,6 +39,9 @@ export function HeaderPartner({ name, avatar, lastName }) {
         id="file-loader-button"
         type="file"
       />
+
+        </div>
+     
 
       <div className={styles.header_content__text}>
         <h2 className={styles.header_content__name}>

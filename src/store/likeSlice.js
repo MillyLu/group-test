@@ -7,14 +7,18 @@ const likesSlice = createSlice({
   },
   reducers: {
     addLike(state, action) {
-      state.likes.push(action.payload);
+      if (!state.includes(action.payload)) state.push(action.payload);
     },
     deleteLike(state, action) {
-      state.likes.filter((like) => like.id !== action.payload.id);
+     // console.log(state.likes);
+      return state.filter((like) => like !== action.payload);
+    },
+    clearLikes(state) {
+      return state = {likes: []};
     },
   },
 });
 
 export default likesSlice.reducer;
 
-export const { addLike, deleteLike } = likesSlice.actions;
+export const { addLike, deleteLike, clearLikes } = likesSlice.actions;

@@ -7,7 +7,7 @@ import styles from "./index.module.css";
 export function TeamPage() {
   return (
     <div className={styles.container}>
-      <Header>
+      <Header page='Team'>
         <>
           <HeaderContentTeam />
           <HeaderButton title="Выход" />

@@ -37,7 +37,7 @@ console.log(avatar);
 
   return (
     <div className={styles.container}>
-      <Header>
+      <Header page='Partner'>
         <>
           <HeaderPartner name={name} lastName={lastName} avatar={avatar}/>
         </>
