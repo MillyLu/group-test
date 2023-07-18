@@ -55,3 +55,34 @@
   top: 32px;
   left: 80px;
 }
+
+
+@media (max-width: 376px) {
+  .button_back {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #512689;
+    align-self: flex-start;
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    color:transparent;
+    background-image: url(../../assets/image/back.png);
+  }
+
+  .button_exit {
+    background-color: #512689;
+    align-self: flex-start;
+    position: absolute;
+    top: 16px;
+    left: 310px;
+    width: 40px;
+    height: 40px;
+    color: transparent;
+    background-image: url(../../assets/image/exit.png);
+    border: none;
+
+  }
+
+}
