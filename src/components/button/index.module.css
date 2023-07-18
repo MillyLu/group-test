@@ -35,3 +35,23 @@
   top: 32px;
   left: 1279px;
 }
+
+.button_back_none {
+  display: none;
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  border: 1px;
+  gap: 8px;
+  border: 1px solid #f8f8f8;
+  color: #f8f8f8;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  background-color: #512689;
+  align-self: flex-start;
+  position: absolute;
+  top: 32px;
+  left: 80px;
+}

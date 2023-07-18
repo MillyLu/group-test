@@ -18,21 +18,21 @@ export function UserItem(props) {
 
   const [like, setLike] = useState(false);
   const toggleLike = () => {
-    setLike((prev) => !prev);
+    // setLike((prev) => !prev);
     if (like) {
       setLike(false);
       dispatch(deleteLike(userId));
     } else {
-      setLike(true);
       dispatch(addLike(userId));
+      setLike(true);
     }
   };
 
   useEffect(() => {
-    if (likesList.likes.includes(userId)) {
+    if (likesList && likesList.includes(userId)) {
       setLike(true);
     }
-  }, [likesList.likes, userId]);
+  }, [likesList, userId]);
 
   return (
     <div className={styles.user}>

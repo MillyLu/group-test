@@ -36,10 +36,10 @@ color: white;
 .header_content__load{
 
         cursor: pointer;
-        background-color: yellow;
+        background-color: rgb(234, 234, 225);
         border: 1px solid black;
-        border-radius: 12px;
-        padding: 20px;
+        border-radius: 50%;
+        padding: 5px 10px;
 
 }
 
@@ -47,6 +47,16 @@ color: white;
     opacity: 0;
     position: absolute;
     z-index: -1;
+}
+
+.header_content_ava{
+    position: relative;
+}
+
+.header_content__load{
+    position:absolute;
+    top: 150px;
+    left: 140px
 }
 
 
