@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 import { useNavigate } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addLike, deleteLike } from "../../store/likeSlice";
 
@@ -19,9 +19,20 @@ export function UserItem(props) {
   const [like, setLike] = useState(false);
   const toggleLike = () => {
     setLike((prev) => !prev);
-    if (like) dispatch(addLike(userId));
-    else dispatch(deleteLike(userId));
+    if (like) {
+      setLike(false);
+      dispatch(deleteLike(userId));
+    } else {
+      setLike(true);
+      dispatch(addLike(userId));
+    }
   };
+
+  useEffect(() => {
+    if (likesList.likes.includes(userId)) {
+      setLike(true);
+    }
+  }, [likesList.likes, userId]);
 
   return (
     <div className={styles.user}>
