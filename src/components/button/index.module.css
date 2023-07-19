@@ -1,88 +1,85 @@
 .button_back {
-  padding: 8px 16px 8px 16px;
-  border-radius: 8px;
-  border: 1px;
-  gap: 8px;
-  border: 1px solid #f8f8f8;
-  color: #f8f8f8;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
-  background-color: #512689;
-  align-self: flex-start;
-  position: absolute;
-  top: 32px;
-  left: 80px;
+    padding: 8px 16px 8px 16px;
+    border-radius: 8px;
+    border: 1px;
+    gap: 8px;
+    border: 1px solid #f8f8f8;
+    color: #f8f8f8;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    background-color: #512689;
+    align-self: flex-start;
+    position: absolute;
+    top: 32px;
+    left: 80px;
 }
 
 .button_exit {
-  padding: 8px 16px 8px 16px;
-  border-radius: 8px;
-  border: 1px;
-  gap: 8px;
-  border: 1px solid #f8f8f8;
-  color: #f8f8f8;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
-  background-color: #512689;
-  align-self: flex-start;
-  position: absolute;
-  top: 32px;
-  left: 1279px;
+    padding: 8px 16px 8px 16px;
+    border-radius: 8px;
+    border: 1px;
+    gap: 8px;
+    border: 1px solid #f8f8f8;
+    color: #f8f8f8;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    background-color: #512689;
+    align-self: flex-start;
+    position: absolute;
+    top: 32px;
+    left: 1279px;
 }
 
 .button_back_none {
-  display: none;
-  padding: 8px 16px 8px 16px;
-  border-radius: 8px;
-  border: 1px;
-  gap: 8px;
-  border: 1px solid #f8f8f8;
-  color: #f8f8f8;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
-  background-color: #512689;
-  align-self: flex-start;
-  position: absolute;
-  top: 32px;
-  left: 80px;
+    display: none;
+    padding: 8px 16px 8px 16px;
+    border-radius: 8px;
+    border: 1px;
+    gap: 8px;
+    border: 1px solid #f8f8f8;
+    color: #f8f8f8;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    background-color: #512689;
+    align-self: flex-start;
+    position: absolute;
+    top: 32px;
+    left: 80px;
 }
 
-
 @media (max-width: 376px) {
-  .button_back {
-    width: 40px;
-    height: 40px;
-    border: none;
-    background-color: #512689;
-    align-self: flex-start;
-    position: absolute;
-    top: 16px;
-    left: 12px;
-    color:transparent;
-    background-image: url(../../assets/image/back.png);
-  }
+    .button_back {
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: #512689;
+        align-self: flex-start;
+        position: absolute;
+        top: 16px;
+        left: 12px;
+        color: transparent;
+        background-image: url(../../assets/image/back.png);
+    }
 
-  .button_exit {
-    background-color: #512689;
-    align-self: flex-start;
-    position: absolute;
-    top: 16px;
-    left: 310px;
-    width: 40px;
-    height: 40px;
-    color: transparent;
-    background-image: url(../../assets/image/exit.png);
-    border: none;
-
-  }
-
+    .button_exit {
+        background-color: #512689;
+        align-self: flex-start;
+        position: absolute;
+        top: 16px;
+        left: 310px;
+        width: 40px;
+        height: 40px;
+        color: transparent;
+        background-image: url(../../assets/image/exit.png);
+        border: none;
+    }
 }

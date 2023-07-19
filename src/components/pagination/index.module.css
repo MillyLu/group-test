@@ -1,39 +1,39 @@
 .pagination {
-  margin-top: 100px;
+    margin-top: 100px;
 }
 
 .pagination_list {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
 }
 
 .pagination_item {
-  padding: 8px 16px 8px 16px;
-  border-radius: 8px;
-  border: 1px;
-  gap: 8px;
-  border: 1px solid #f8f8f8;
-  color: #f8f8f8;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
-  background-color: #512689;
+    padding: 8px 16px 8px 16px;
+    border-radius: 8px;
+    border: 1px;
+    gap: 8px;
+    border: 1px solid #f8f8f8;
+    color: #f8f8f8;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    background-color: #512689;
 }
 
 .pagination_item_active {
-  padding: 8px 16px 8px 16px;
-  border-radius: 8px;
-  border: 1px;
-  gap: 8px;
-  border: 1px solid #512689;
-  color: #512689;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
-  background-color: #f8f8f8;
+    padding: 8px 16px 8px 16px;
+    border-radius: 8px;
+    border: 1px;
+    gap: 8px;
+    border: 1px solid #512689;
+    color: #512689;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    background-color: #f8f8f8;
 }

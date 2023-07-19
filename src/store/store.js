@@ -1,37 +1,48 @@
-/*import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import usersSlice from "./usersSlice";
-import userReducer from "./usersSlice";
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import {
+    persistStore,
+    persistReducer,
+    REGISTER,
+    FLUSH,
+    REHYDRATE,
+    PAUSE,
+    PERSIST,
+    PURGE,
+} from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
+import userReducer from './usersSlice';
+import likesReducer from './likeSlice';
+import authReducer from './authSlice';
 
 const rootReducer = combineReducers({
-  users: userReducer,
-});
-
-export const store = configureStore({
-  reducer: rootReducer,
-});*/
-
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { persistStore, persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
-
-import userReducer from "./usersSlice";
-import likesReducer from "./likeSlice";
-
-const rootReducer = combineReducers({
-  users: userReducer,
-  likes: likesReducer,
+    users: userReducer,
+    likes: likesReducer,
+    auth: authReducer,
 });
 
 const persistConfig = {
-  key: "root",
-  storage,
-  // blacklist: ["users"],
+    key: 'root',
+    storage,
+    // blacklist: ["users"], // при большом количестве users внести в blacklist(не перегружать ls)
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: persistedReducer,
-  //  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: {
+                ignoredActions: [
+                    FLUSH,
+                    REHYDRATE,
+                    PAUSE,
+                    PERSIST,
+                    PURGE,
+                    REGISTER,
+                ],
+            },
+        }),
 });
 export const persistor = persistStore(store);

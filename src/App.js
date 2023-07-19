@@ -1,13 +1,16 @@
-import "./App.css";
-import { AppRoutes } from "./routes";
+import './App.css';
+import { AppRoutes } from './routes';
+import { useSelector } from 'react-redux';
 
 function App() {
+    const token = useSelector((state) => state.auth.token);
+    console.log(Boolean(token));
 
-  const token = localStorage.getItem('token');
-
-  return <div className="App">
-    <AppRoutes user={token}/>
-  </div>;
+    return (
+        <div className="App">
+            <AppRoutes user={token} />
+        </div>
+    );
 }
 
 export default App;
