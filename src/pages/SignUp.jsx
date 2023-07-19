@@ -1,10 +1,11 @@
-import { ModalRegister } from "../components/modal/Modal";
-import styles from "./signUp.module.css";
+import { ModalRegister } from '../components/modal/Modal';
+import { SignUpContainer } from '../components/signUpContainer/SignUpContainer';
+
 
 export function SignUp() {
-  return (
-    <div className={styles.container}>
-      <ModalRegister />
-    </div>
-  );
+    return (
+        <SignUpContainer>
+            <ModalRegister />
+        </SignUpContainer>
+    );
 }
