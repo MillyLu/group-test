@@ -49,16 +49,16 @@ export function ModalRegister() {
     return (
         <div className={styles.modal}>
             <form
-                onSubmit={handleSubmit((data) => {
+                onSubmit={handleSubmit(async (data, e) => {
+                    e.preventDefault();
                     console.log(data);
-                    dispatch(
+                    await dispatch(
                         registration({
                             email: data.email,
                             password: data.password,
                         }),
                     );
-                    // navigate(path, { replace: true });
-                    navigate('/');
+                    navigate(path, { replace: true });
                 })}
                 className={styles.modal_form}
             >

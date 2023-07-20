@@ -25,7 +25,6 @@ export const authSlice = createSlice({
     reducers: {
         deleteUser: (state) => {
             localStorage.removeItem('token');
-            console.log('Delete');
             state.token = null;
         },
     },
