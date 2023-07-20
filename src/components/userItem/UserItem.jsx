@@ -4,7 +4,7 @@ import { FaRegHeart } from 'react-icons/fa';
 import { FaHeart } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addLike, deleteLike } from '../../store/likeSlice';
+import { addLikes, deleteLikes } from '../../store/likeSlice';
 
 export function UserItem(props) {
     const style = { color: 'purple' };
@@ -19,15 +19,19 @@ export function UserItem(props) {
     const toggleLike = () => {
         if (like) {
             setLike(false);
-            dispatch(deleteLike(userId));
+            dispatch(deleteLikes(userId));
         } else {
-            dispatch(addLike(userId));
+            dispatch(addLikes(userId));
             setLike(true);
         }
     };
 
     useEffect(() => {
-        if (likesList && likesList.length >= 1 && likesList.includes(userId)) {
+        if (
+            likesList.likes &&
+            likesList.likes.length >= 1 &&
+            likesList.likes.includes(userId)
+        ) {
             setLike(true);
         }
     }, [likesList, userId]);

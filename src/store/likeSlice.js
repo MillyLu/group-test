@@ -1,21 +1,37 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const initialState = {
+    likes: [],
+};
 const likesSlice = createSlice({
     name: 'likes',
-    initialState: { likes: [] },
+    initialState,
     reducers: {
-        addLike(state, action) {
-            if (!state.includes(action.payload)) state.push(action.payload);
+        addLikes: (state, action) => {
+            return {
+                ...state,
+
+                likes: [...state.likes, action.payload],
+            };
         },
-        deleteLike(state, action) {
-            return state.filter((like) => like !== action.payload);
+        deleteLikes: (state, action) => {
+            const indexIds = state.likes.indexOf(action.payload);
+            console.log(indexIds);
+            if (indexIds < 0) return state;
+            const newIds = [...state.likes];
+            newIds.splice(indexIds, 1);
+
+            return {
+                ...state,
+                likes: [...newIds],
+            };
         },
         clearLikes(state) {
-            return (state = []);
+            return initialState;
         },
     },
 });
 
 export default likesSlice.reducer;
 
-export const { addLike, deleteLike, clearLikes } = likesSlice.actions;
+export const { addLikes, deleteLikes, clearLikes } = likesSlice.actions;
