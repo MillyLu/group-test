@@ -13,8 +13,9 @@ export function HeaderButton(props) {
     };
 
     const exit = () => {
-        // dispatch(clearLikes);
-        dispatch(deleteUser);
+       dispatch(clearLikes());
+        dispatch(deleteUser());
+
         navigate('/auth');
     };
 

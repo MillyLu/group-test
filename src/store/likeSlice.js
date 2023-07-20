@@ -11,7 +11,7 @@ const likesSlice = createSlice({
             return state.filter((like) => like !== action.payload);
         },
         clearLikes(state) {
-            return (state.likes = []);
+            return (state = []);
         },
     },
 });

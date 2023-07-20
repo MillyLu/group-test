@@ -13,6 +13,7 @@ export function UserItem(props) {
     const dispatch = useDispatch();
 
     const likesList = useSelector((state) => state.likes);
+    console.log(likesList);
 
     const [like, setLike] = useState(false);
     const toggleLike = () => {
@@ -26,7 +27,7 @@ export function UserItem(props) {
     };
 
     useEffect(() => {
-        if (likesList && likesList.includes(userId)) {
+        if (likesList && likesList.length >= 1 && likesList.includes(userId)) {
             setLike(true);
         }
     }, [likesList, userId]);
