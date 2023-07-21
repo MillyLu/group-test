@@ -13,7 +13,6 @@ export function UserItem(props) {
     const dispatch = useDispatch();
 
     const likesList = useSelector((state) => state.likes);
-    console.log(likesList);
 
     const [like, setLike] = useState(false);
     const toggleLike = () => {
@@ -37,19 +36,25 @@ export function UserItem(props) {
     }, [likesList, userId]);
 
     return (
-        <div className={styles.user}>
+        <div
+            className={styles.user}
+            onClick={() => navigate(`/partner/${userId}`)}
+        >
             <img
                 className={styles.user_avatar}
                 alt="avatar"
                 src={props.avatar}
             ></img>
-            <p
-                onClick={() => navigate(`/partner/${userId}`)}
-                className={styles.user_name}
-            >
+            <p className={styles.user_name}>
                 {props.name} {props.lastName}
             </p>
-            <i className={styles.user_likes} onClick={toggleLike}>
+            <i
+                className={styles.user_likes}
+                onClick={(e) => {
+                    e.stopPropagation();
+                    toggleLike();
+                }}
+            >
                 {like ? <FaHeart style={style} /> : <FaRegHeart />}
             </i>
         </div>
