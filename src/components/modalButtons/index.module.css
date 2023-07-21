@@ -1,0 +1,39 @@
+.modal_form__button {
+    width: 468px;
+    height: 48px;
+    padding: 8px 12px 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #512689;
+    color: white;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    margin-top: 16px;
+    transition: all 1s;
+}
+
+.modal_form {
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.modal_form__button:hover{
+    background-color: #f8f8f8;
+    color: #512689;
+    border: 2px solid #512689;
+}
+
+
+@media (max-width: 376px) {
+
+    .modal_form__button {
+        width: 343px;
+    }
+}

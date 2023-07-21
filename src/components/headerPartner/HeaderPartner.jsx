@@ -13,8 +13,6 @@ export function HeaderPartner({ name, avatar, lastName }) {
         event.preventDefault();
         if (event.target.files && event.target.files.length) {
             const file = event.target.files[0];
-            console.log(file);
-
             fileReader.readAsDataURL(file);
             setImage(file);
         }

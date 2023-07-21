@@ -15,7 +15,14 @@
     position: absolute;
     top: 32px;
     left: 80px;
+    transition: all 1s;
 }
+
+.button_back:hover{
+    background-color: #f8f8f8;
+    color: #512689
+}
+
 
 .button_exit {
     padding: 8px 16px 8px 16px;
@@ -34,6 +41,13 @@
     position: absolute;
     top: 32px;
     left: 1279px;
+    transition: all 1s;
+}
+
+.button_exit:hover{
+    background-color: #f8f8f8;
+    color: #512689;
+
 }
 
 .button_back_none {

@@ -16,7 +16,6 @@ const likesSlice = createSlice({
         },
         deleteLikes: (state, action) => {
             const indexIds = state.likes.indexOf(action.payload);
-            console.log(indexIds);
             if (indexIds < 0) return state;
             const newIds = [...state.likes];
             newIds.splice(indexIds, 1);

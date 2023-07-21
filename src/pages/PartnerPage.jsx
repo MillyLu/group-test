@@ -21,7 +21,7 @@ export function PartnerPage() {
             );
             const data = await response.json();
 
-            console.log(data);
+
             setAvatar(data.data.avatar);
             setName(data.data.first_name);
             setLastName(data.data.last_name);
@@ -32,7 +32,7 @@ export function PartnerPage() {
         getUserById();
     }, [userId]);
 
-    console.log(avatar);
+
 
     return (
         <Container>

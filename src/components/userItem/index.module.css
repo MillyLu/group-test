@@ -9,6 +9,10 @@
     flex-direction: column;
     gap: 16px;
     box-shadow: 0px 0.9960451126098633px 3.984180450439453px 0px #33333326;
+    transition: all 2s;
+}
+.user:hover{
+    transform: scale(1.1)
 }
 
 .user_avatar {
